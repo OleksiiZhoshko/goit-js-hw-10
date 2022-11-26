@@ -27,7 +27,7 @@ function inputValue(evt) {
       }
       renderCountryList(country);
     })
-    .catch(err => Notify.failure('Oops, there is no country with that name'));
+    .catch(error => Notify.failure('Oops, there is no country with that name'));
 }
 
 function renderCountryList(arr) {
