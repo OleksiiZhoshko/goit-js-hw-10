@@ -1,5 +1,5 @@
 import './css/styles.css';
-import { fetchCountries } from './fetchCountries';
+import fetchCountries from './fetchCountries';
 import { Notify } from 'notiflix';
 import debounce from 'lodash.debounce';
 
@@ -18,7 +18,6 @@ function inputValue(evt) {
     return;
   }
     fetchCountries(inputText)
-      console.log(inputText)
     .then(country => {
       if (country.length > 10) {
         Notify.info(
