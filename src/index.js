@@ -35,8 +35,8 @@ function renderCountryList(arr) {
   if (arr.length === 1) {
     return (countryInfo.innerHTML = arr
       .map(country => {
-        return `<img class="country-svg" src="${country.flags.svg}" alt="${country.mame}" width="50px">
-                <h2>${country.name.ofFicial}</h2>
+        return `<img class="country-svg" src="${country.flags.svg}" alt="${country.name}" width="50px">
+                <h2>${country.name.official}</h2>
                 <p class="country-text">Capital:${country.capital}</p>
                 <p class="country-text">Population:${country.population}</p>
                 <p class="country-text">Languages:${country.languages}</p>`;
@@ -46,8 +46,8 @@ function renderCountryList(arr) {
   countryList.innerHTML = arr
     .map(country => {
       return `<li class="country-item">
-            <img class="country-svg" src="${country.flags.svg}" alt="${country.mame}" width="50px">
-            <h2>${country.name.ofFicial}</h2>
+            <img class="country-svg" src="${country.flags.svg}" alt="${country.name}" width="50px">
+            <h2>${country.name.official}</h2>
             </li>`;
     })
     .join('');
